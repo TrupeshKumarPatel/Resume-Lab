@@ -611,15 +611,15 @@
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
 \newcommand*{\cventry}[5]{%
-  \vspace{-2.0mm}
+ % \vspace{-2.0mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+  \begin{tabular*}{0.65\textwidth}{@{\extracolsep{\fill}} L{5.5cm} R{3.5cm}}
     \ifempty{#2#3}
       {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
       {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
       \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
+    \multicolumn{2}{L{0.65\textwidth}}{\descriptionstyle{#5}}
   \end{tabular*}%
 }
 
@@ -649,20 +649,26 @@
 
 % Define an environment for cvhonor
 \newenvironment{cvhonors}{%
-  \vspace{\acvSectionContentTopSkip}
-  \vspace{-2mm}
-  \begin{center}
-    \setlength\tabcolsep{0pt}
-    \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{1.5cm} L{\textwidth - 4.0cm} R{2.5cm}}
+%  \vspace{\acvSectionContentTopSkip}
+%  \vspace{-2mm}
+%  \begin{center}
+%    \setlength\tabcolsep{0pt}
+%    \setlength{\extrarowheight}{0pt}
+%    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{1.5cm} L{\textwidth - 4.0cm} R{2.5cm}}
 }{%
-    \end{tabular*}
+%    \end{tabular*}
   \end{center}
 }
 % Define a line of cv information(honor, award or something else)
 % Usage: \cvhonor{<position>}{<title>}{<location>}{<date>}
-\newcommand*{\cvhonor}[4]{%
-  \honordatestyle{#4} & \honorpositionstyle{#1}, \honortitlestyle{#2} & \honorlocationstyle{#3} \\
+\newcommand*{\cvhonor}[3]{%
+%  \honordatestyle{#4} & \honorpositionstyle{#1}, \honortitlestyle{#2} & \honorlocationstyle{#3} \\
+   \begin{tabular*}{0.65\textwidth}{@{\extracolsep{\fill}} L{5.5cm} R{3.5cm}}
+    \ifempty{#3}
+      {\honorpositionstyle{#1} & \entrydatestyle{#2} \\}
+      {\honorpositionstyle{#1} & \honordatestyle{#2} \\}
+    \multicolumn{2}{L{0.65\textwidth}}{\descriptionstyle{#3}}
+  \end{tabular*}%
 }
 
 % Define an environment for cvskill
