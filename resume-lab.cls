@@ -1,12 +1,13 @@
-%% Start of file `awesome-cv.cls'.
-% Awesome CV Class File
+%%%%%%%%%%%%%%%%%%%%%%%%%% Resume-Lab %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is LaTex style class file. 
+% Modified version of Awesome CV Class File (downloaded 
+% from: https://github.com/posquit0/Awesome-CV)
 %
-% This class has been downloaded from:
-% https://github.com/posquit0/Awesome-CV
+% This file has been downloaded form:
+% https://github.com/TrupeshKumarPatel/Resume-Lab
 %
 % Author:
-% Claud D. Park <posquit0.bj@gmail.com>
-% http://www.posquit0.com
+% Trupeshkumar R. Patel <pateltrupesh27@gmail.com>
 %
 % Notes:
 % 1) This class file defines the structure and layout of the template file (cv.tex, resume.tex).
