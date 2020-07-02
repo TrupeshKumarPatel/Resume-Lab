@@ -1,0 +1,10 @@
+  
+.DS_Store
+*.synctex.gz
+*.aux
+*.log
+*iMac*
+*.bbl
+*.blg
+*.dvi
+*.out
