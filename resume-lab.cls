@@ -90,10 +90,18 @@
   pdfkeywords={}
 }
 \usepackage{xcolor}					% For Color
-\usepackage{eso-pic}					%	"
+\usepackage[pscoord]{eso-pic}					%	"
 \usepackage{parallel}
 \usepackage{xstring}
 \newcounter{fshadow}
+%\usepackage{showframe}
+\usepackage{wrapfig}
+\usepackage[absolute, overlay]{textpos}
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{15mm}{50mm} % start everything near the top-left corner
+\setlength{\parindent}{0pt}
+
 
 %-------------------------------------------------------------------------------
 %                Configuration for directory locations
@@ -671,23 +679,62 @@
   \end{tabular*}%
 }
 
-% Define an environment for cvskill
-\newenvironment{cvskills}{%
-  \vspace{\acvSectionContentTopSkip}
-  \vspace{-2.0mm}
-  \begin{center}
-    \setlength\tabcolsep{1ex}
-    \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{\textwidth * \real{0.9}}}
+\newcommand*{\lettersectionstyles}[1]{{\fontsize{14pt}{2em}\bodyfont\color{white}#1}}%\@sectioncolor #1}}
+
+% For elements of skill
+\newcommand*{\skilltypestyles}[1]{{\fontsize{10pt}{1.5em}\bodyfont\color{white} #1}}
+\newcommand*{\skillsetstyles}[1]{{\fontsize{10pt}{1.3em}\bodyfontlight\color{white} #1}}
+
+
+\newcommand*{\skillsection}[2]{
+	\begin{minipage}{\textwidth}
+		%	\begin{flushleft}
+		%		\lettersectionstyles{#1}\vspace{1mm}\\
+		%		\color{white}\vhrulefill{0.05pt}\vspace{1mm}\\
+		\hspace{1mm}
+		\skilltypestyles{#1}\vspace{0.3mm} \skillsetstyles{#2}\vspace{2mm}
+		%	\end{flushleft}
+	\end{minipage}
+}
+
+\newcommand*{\interestsection}[1]{
+	\begin{minipage}{\textwidth}
+		%	\begin{flushleft}
+		%		\lettersectionstyles{#1}\vspace{1mm}\\
+		%		\color{white}\vhrulefill{0.05pt}\vspace{1mm}\\
+		\skillsetstyles{#1}\vspace{2mm}
+		%	\end{flushleft}
+	\end{minipage}
+}
+
+% Define an environment for cvitems(for cventry)
+\newenvironment{skillitems}{%
+%  \begin{justify}
+  \begin{itemize}[leftmargin=5mm]%, nosep, noitemsep]
+    %\setlength{\parskip}{0pt}
+    %\renewcommand{\labelitemi}{\bullet}
 }{%
-    \end{tabular*}
-  \end{center}
+  \end{itemize}
+%  \end{justify}
 }
-% Define a line of cv information(skill)
-% Usage: \cvskill{<type>}{<skillset>}
-\newcommand*{\cvskill}[2]{%
-	\skilltypestyle{#1} & \skillsetstyle{#2} \\
-}
+
+%% Define an environment for cvskill
+%\newenvironment{cvskills}{%
+%  \vspace{\acvSectionContentTopSkip}
+%  \vspace{-2.0mm}
+%  \begin{center}
+%    \setlength\tabcolsep{1ex}
+%    \setlength{\extrarowheight}{0pt}
+%    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{\textwidth * \real{0.9}}}
+%}{%
+%    \end{tabular*}
+%  \end{center}
+%}
+%% Define a line of cv information(skill)
+%% Usage: \cvskill{<type>}{<skillset>}
+%\newcommand*{\cvskill}[2]{%
+%	\skilltypestyle{#1} & \skillsetstyle{#2} \\
+%}
 
 % Define an environment for cvitems(for cventry)
 \newenvironment{cvitems}{%

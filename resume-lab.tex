@@ -88,7 +88,7 @@
 \makecvfooter
   {\today}
   {FirstName LastName~~~·~~~Resume}
-  {}
+  {\thepage}
 
 % Print the title with above letter informations
 %\makelettertitle
@@ -96,7 +96,7 @@
 %-------------------------------------------------------------------------------
 %	LETTER CONTENT
 %-------------------------------------------------------------------------------
-\begin{Parallel}{0.25\textwidth}{0.65\textwidth}
+\begin{Parallel}[v]{0.265\textwidth}{0.66\textwidth}
 \ParallelRText{\noindent
 
 \begin{cvletter}
@@ -195,6 +195,82 @@ This is opening statement about you as very brief objective/summary in 2-4 sente
         \item {Description - 5}
       \end{cvitems}
     }
+
+\end{cvletter}
+
+\begin{textblock}{2}(0,0)
+	
+	\lettersectionstyles{Technical Skills}\vspace{5mm}\\
+	\skillsection
+	{Programming Languages}
+	{
+		\begin{skillitems} % Description(s) of project
+			\item {Description - 1}
+			\item {Description - 2}
+			\item {Description - 3}
+			\item {Description - 4}
+			\item {Description - 5}
+		\end{skillitems}
+	}
+	
+	\skillsection
+	{Databases}
+	{
+		\begin{skillitems} % Description(s) of project
+			\item {Description - 1}
+			\item {Description - 2}
+			\item {Description - 3}
+			\item {Description - 4}
+			\item {Description - 5}
+		\end{skillitems}
+	}
+	
+	\skillsection
+	{Data Science \& Big data Tools}
+	{
+		\begin{skillitems} % Description(s) of project
+			\item {Description - 1}
+			\item {Description - 2}
+			\item {Description - 3}
+			\item {Description - 4}
+			\item {Description - 5}
+		\end{skillitems}
+	}
+	
+	\skillsection
+	{Web Technologies}
+	{
+		\begin{skillitems} % Description(s) of project
+			\item {Description - 1}
+			\item {Description - 2}
+			\item {Description - 3}
+			\item {Description - 4}
+			\item {Description - 5}
+		\end{skillitems}
+	}
+	
+	\lettersectionstyles{Research Interest}\vspace{5mm}\\
+	\interestsection
+	{
+		\begin{skillitems} % Description(s) of project
+			\item {Description - 1}
+			\item {Description - 2}
+			\item {Description - 3}
+			\item {Description - 4}
+			\item {Description - 5}
+		\end{skillitems}
+	}
+	
+\end{textblock}
+
+}
+\ParallelPar
+
+\newpage
+
+\ParallelRText{\noindent
+
+\begin{cvletter}
 %-------------------------------------------------------------------------------
 %	PROJECTS
 %-------------------------------------------------------------------------------
@@ -207,11 +283,82 @@ Here write your Poster publications and make sure \textbf{Your Name} is in \text
 \lettersection{Oral Presentations}
 Here write your Oral publications and make sure \textbf{Your Name} is in \textsc{Bold}.
 
-
 \end{cvletter}
+
+\begin{textblock}{2}(0,-1.3)
+	\lettersectionstyles{Coursework}\vspace{5mm}\\
+	\skillsection
+	{Data Science}
+	{
+		\begin{skillitems} % Description(s) of project
+			\item {Description - 1}
+			\item {Description - 2}
+			\item {Description - 3}
+			\item {Description - 4}
+			\item {Description - 5}
+		\end{skillitems}
+	}
+
+	\skillsection
+	{Algorithm \& Data Structure}
+	{
+		\begin{skillitems} % Description(s) of project
+			\item {Description - 1}
+			\item {Description - 2}
+			\item {Description - 3}
+			\item {Description - 4}
+			\item {Description - 5}
+		\end{skillitems}
+	}
+	
+	\skillsection
+	{Cyber Security}
+	{
+		\begin{skillitems} % Description(s) of project
+			\item {Description - 1}
+			\item {Description - 2}
+			\item {Description - 3}
+			\item {Description - 4}
+			\item {Description - 5}
+		\end{skillitems}
+	}
+	
+	\lettersectionstyles{Awards}\vspace{5mm}\\
+	\interestsection
+	{
+		\begin{skillitems} % Description(s) of project
+			\item {Description - 1}
+			\item {Description - 2}
+			\item {Description - 3}
+			\item {Description - 4}
+			\item {Description - 5}
+		\end{skillitems}
+	}
+
+	\lettersectionstyles{Certifications}\vspace{5mm}\\
+	\interestsection
+	{
+		\begin{skillitems} % Description(s) of project
+			\item {Description - 1}
+			\item {Description - 2}
+			\item {Description - 3}
+			\item {Description - 4}
+			\item {Description - 5}
+		\end{skillitems}
+	}
+\end{textblock}
 }
 \ParallelPar
+
 \end{Parallel}
+
+
+%%-------------------------------------------------------------------------------
+%%	BRIEF OBJECTIVE/SUMMARY
+%%-------------------------------------------------------------------------------
+
+
+
 %-------------------------------------------------------------------------------
 % Print the signature and enclosures with above letter informations
 %\makeletterclosing
