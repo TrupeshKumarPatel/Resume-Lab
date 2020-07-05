@@ -5,9 +5,12 @@
   <br />
 </h1>
 
-# What is Resume Lab?
+## What is Resume Lab?
 **Resume Lab** is LaTex template for resume inspired by [Awesome CV](https://github.com/posquit0/Awesome-CV). It easy to customize.
 
+## Preview
+
+You can see [embed]https://raw.githubusercontent.com/TrupeshKumarPatel/Resume-Lab/blob/master/resume-lab.pdf[/embed]
 
 ## Credit
 
