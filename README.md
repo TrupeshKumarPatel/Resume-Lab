@@ -10,7 +10,7 @@
 
 ## Preview
 
-You can see [embed]https://github.com/TrupeshKumarPatel/Resume-Lab/blob/master/resume-lab.pdf[\embed]
+You can see [pdf](https://github.com/TrupeshKumarPatel/Resume-Lab/blob/master/resume-lab.pdf)
 
 ## Credit
 
